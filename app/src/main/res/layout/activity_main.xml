@@ -147,7 +147,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btn_register"
             app:layout_constraintStart_toStartOf="@+id/btn_register"
-            app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_register"
+            android:onClick="onClickLogin" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

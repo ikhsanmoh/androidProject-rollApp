@@ -21,4 +21,12 @@ public class MainActivity extends AppCompatActivity {
     //Opening New Activity
     startActivity(myInt);
   }
+
+  // Login Button Event Handler
+  public void onClickLogin(View v){
+    //Create instance for Intent Object
+    Intent myInt = new Intent(this, LoginActivity.class);
+    //Opening New Activity
+    startActivity(myInt);
+  }
 }
