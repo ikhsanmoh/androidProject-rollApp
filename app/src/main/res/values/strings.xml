@@ -5,16 +5,22 @@
     <string name="app_motto2">
         &quot;There is one thing the photograph must contain, the humanity of the moment&quot;
     </string>
+
     <!-- Button Text -->
     <string name="about">ABOUT</string>
     <string name="contact">CONTACT</string>
     <string name="regist">REGISTER</string>
     <string name="login">LOGIN</string>
+
+    <!-- Label -->
     <string name="title_activity_register">Sign Up</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="prompt_cpassword">Confirm Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_phone">Phone Number</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>

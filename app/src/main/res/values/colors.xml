@@ -8,6 +8,9 @@
     <!-- Custom -->
     <color name="main_blue">#0099ff</color>
     <color name="white">#ffffff</color>
+    <color name="black">#0d0d0d</color>
+    <color name="dark">#333333</color>
+    <color name="gray">#595959</color>
     <color name="blue">#008ae6</color>
     <color name="blue_light">#f4fbfb</color>
     <color name="green">#2eb82e</color>
