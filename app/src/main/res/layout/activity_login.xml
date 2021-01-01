@@ -102,6 +102,7 @@
                 android:layout_height="30dp"
                 android:background="@drawable/rounded_shape_green"
                 android:fontFamily="sans-serif-condensed-medium"
+                android:onClick="onClickLoginSubmit"
                 android:text="@string/login"
                 android:textColor="@color/white"
                 android:textSize="20sp"
