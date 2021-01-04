@@ -11,6 +11,8 @@
     <string name="contact">CONTACT</string>
     <string name="regist">REGISTER</string>
     <string name="login">LOGIN</string>
+    <string name="propmt_close">X</string>
+    <string name="booking">Book</string>
 
     <!-- Label -->
     <string name="home">Home</string>
@@ -28,4 +30,23 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="wedding">Wedding</string>
+    <string name="photographer_domicilie">Domicilie</string>
+    <string name="photographer_service_price">Price</string>
+    <string name="photographer_services">Profession</string>
+    <string name="photographer_top_porto">Best Capture</string>
+    <string name="comment">Comments</string>
+
+    <!-- Placeholder/Example -->
+    <string name="photographer_name">Nama Photographer</string>
+    <string name="photographer_rating_ex">4.5</string>
+    <string name="photographer_domicilie_ex">Alamat</string>
+    <string name="photographer_price_ex">Rp. 250.000 / Hour</string>
+    <string name="photographer_category_1_ex">Prewedding</string>
+    <string name="photographer_category_2_ex">Wedding</string>
+    <string name="photographer_service_1_ex">Photographer</string>
+    <string name="photographer_service_2_ex">Videographer</string>
+    <string name="photographer_status_on">Available</string>
+    <string name="photographer_status_off">Unavailable</string>
+    <string name="review_ex">Hasil Yang memuaskan</string>
+
 </resources>

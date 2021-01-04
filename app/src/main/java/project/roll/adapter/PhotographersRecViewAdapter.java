@@ -1,11 +1,11 @@
 package project.roll.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,16 +17,19 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import project.roll.PhotographerProfileActivity;
 import project.roll.R;
 import project.roll.model.Photographer;
+
+import static project.roll.PhotographerProfileActivity.PHOTOGRAPHER_ID_KEY;
 
 public class PhotographersRecViewAdapter extends RecyclerView.Adapter<PhotographersRecViewAdapter.ViewHolder> {
 
   private ArrayList<Photographer> photographers = new ArrayList<>();
-  private Context constext;
+  private Context context;
 
   public PhotographersRecViewAdapter(Context context) {
-    this.constext = context;
+    this.context = context;
   }
 
   @NonNull
@@ -43,10 +46,13 @@ public class PhotographersRecViewAdapter extends RecyclerView.Adapter<Photograph
     holder.parent.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Toast.makeText(constext, photographers.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context, photographers.get(position).getName() + " Selected", Toast.LENGTH_SHORT).show();
+        Intent myIntent = new Intent(context, PhotographerProfileActivity.class);
+        myIntent.putExtra(PHOTOGRAPHER_ID_KEY, photographers.get(position).getId());
+        context.startActivity(myIntent);
       }
     });
-    Glide.with(constext)
+    Glide.with(context)
             .asBitmap()
             .load(photographers.get(position).getImgUrl())
             .into(holder.img);
