@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -77,7 +76,7 @@ public class PhotographersRecViewAdapter extends RecyclerView.Adapter<Photograph
     public ViewHolder(@NonNull View itemView) {
       super(itemView);
       parent = itemView.findViewById(R.id.parent);
-      txtName = itemView.findViewById(R.id.txtName);
+      txtName = itemView.findViewById(R.id.txtPhotographerName);
       img = itemView.findViewById(R.id.image);
     }
   }

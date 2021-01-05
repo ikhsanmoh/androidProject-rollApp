@@ -8,6 +8,7 @@
     <string name="book_note">
         * The rental duration will start when partner has met the customer
     </string>
+    <string name="prompt_inputValue">Some Text</string>
 
     <!-- Button Text -->
     <string name="about">ABOUT</string>
@@ -18,6 +19,8 @@
     <string name="booking">Book</string>
     <string name="cancel">Cancel</string>
     <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="order">Order</string>
 
     <!-- Label -->
     <string name="home">Home</string>
@@ -34,6 +37,10 @@
     <string name="notes">Notes for Partners</string>
     <string name="photo">Photo</string>
     <string name="video">Videos</string>
+    <string name="digital">Digital</string>
+    <string name="Film">Film</string>
+    <string name="camera_type">Camera Type</string>
+    <string name="rent_duration">Hours of Rent</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="prompt_phone">Phone Number</string>

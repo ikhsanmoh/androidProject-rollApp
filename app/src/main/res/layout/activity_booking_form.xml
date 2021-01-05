@@ -43,7 +43,7 @@
                         app:srcCompat="@drawable/ic_launcher_background" />
 
                     <TextView
-                        android:id="@+id/txtName"
+                        android:id="@+id/txtPhotographerName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/imgPhotographer"
@@ -186,7 +186,7 @@
                             android:textColor="@color/red" />
 
                         <Button
-                            android:id="@+id/btnConfirm"
+                            android:id="@+id/btnNext"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
                             android:layout_marginStart="5dp"

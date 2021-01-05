@@ -32,6 +32,8 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
 
   private String inputDate, inputTime, inputCategories, inputLocation, inputNotes;
 
+  private String[] formData;
+
   Photographer photographerData;
 
   @Override
@@ -107,7 +109,7 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
     btnConfirm.setOnClickListener(this);
   }
 
-  private ArrayAdapter<String> adapterSetup(){
+  public ArrayAdapter<String> adapterSetup(){
     return new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item){
       @Override
       public View getView(int position, View convertView, ViewGroup parent) {
@@ -128,7 +130,7 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
 
   private void initViews() {
     imgPhotographerPhoto = findViewById(R.id.imgPhotographer);
-    txtPhotographerName = findViewById(R.id.txtName);
+    txtPhotographerName = findViewById(R.id.txtPhotographerName);
     txtLocations = findViewById(R.id.editTxtLocation);
     txtNotes = findViewById(R.id.editTxtPartnerNotes);
 
@@ -137,7 +139,7 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
     spinCategories = findViewById(R.id.spinCategories);
 
     btnCancel = findViewById(R.id.btnCancel);
-    btnConfirm = findViewById(R.id.btnConfirm);
+    btnConfirm = findViewById(R.id.btnNext);
   }
 
   private void setDataViews(Photographer photographerData) {
@@ -153,14 +155,19 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
       case R.id.btnCancel:
         finish();
         break;
-      case R.id.btnConfirm:
+      case R.id.btnNext:
         inputDate = spinDate.getSelectedItem().toString();
         inputTime = spinTime.getSelectedItem().toString();
         inputCategories = spinCategories.getSelectedItem().toString();
         inputLocation = txtLocations.getText().toString();
         inputNotes = txtNotes.getText().toString();
 
-        // Intent Here
+        formData = new String[]{inputDate, inputTime, inputCategories, inputLocation, inputNotes};
+
+        Intent myInt = new Intent(this, OrderConfirmation.class);
+        myInt.putExtra(PHOTOGRAPHER_ID_KEY, photographerData.getId());
+        myInt.putExtra(FORM_DATA_KEY ,formData);
+        startActivity(myInt);
         break;
       default:
         break;

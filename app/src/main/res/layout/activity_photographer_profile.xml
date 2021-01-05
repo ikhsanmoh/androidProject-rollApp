@@ -82,7 +82,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/txtName"
+                    android:id="@+id/txtPhotographerName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
@@ -95,9 +95,9 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toLeftOf="@id/txtName"
-                    app:layout_constraintRight_toRightOf="@id/txtName"
-                    app:layout_constraintTop_toBottomOf="@id/txtName"
+                    app:layout_constraintLeft_toLeftOf="@id/txtPhotographerName"
+                    app:layout_constraintRight_toRightOf="@id/txtPhotographerName"
+                    app:layout_constraintTop_toBottomOf="@id/txtPhotographerName"
                     android:layout_marginTop="10dp">
 
                     <RelativeLayout

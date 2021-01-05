@@ -49,7 +49,7 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
   }
 
   private void initViews() {
-    txtName = findViewById(R.id.txtName);
+    txtName = findViewById(R.id.txtPhotographerName);
     txtRating = findViewById(R.id.txtRating);
     txtDomicilie = findViewById(R.id.txtDomicilie);
     txtPrice = findViewById(R.id.txtPrice);
