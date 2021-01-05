@@ -5,6 +5,9 @@
     <string name="app_motto2">
         &quot;There is one thing the photograph must contain, the humanity of the moment&quot;
     </string>
+    <string name="book_note">
+        * The rental duration will start when partner has met the customer
+    </string>
 
     <!-- Button Text -->
     <string name="about">ABOUT</string>
@@ -13,6 +16,8 @@
     <string name="login">LOGIN</string>
     <string name="propmt_close">X</string>
     <string name="booking">Book</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
 
     <!-- Label -->
     <string name="home">Home</string>
@@ -23,6 +28,12 @@
     <string name="prompt_login">Username/Email</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_cpassword">Confirm Password</string>
+    <string name="play_date">Play Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="location">Specific Location</string>
+    <string name="notes">Notes for Partners</string>
+    <string name="photo">Photo</string>
+    <string name="video">Videos</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="prompt_phone">Phone Number</string>
@@ -36,7 +47,7 @@
     <string name="photographer_top_porto">Best Capture</string>
     <string name="comment">Comments</string>
 
-    <!-- Placeholder/Example -->
+    <!-- Example -->
     <string name="photographer_name">Nama Photographer</string>
     <string name="photographer_rating_ex">4.5</string>
     <string name="photographer_domicilie_ex">Alamat</string>

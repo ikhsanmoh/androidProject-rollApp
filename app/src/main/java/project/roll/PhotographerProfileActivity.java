@@ -3,7 +3,6 @@ package project.roll;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +24,8 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
   private ImageView imgPhotoProfile, imgBestCapt1, imgBestCapt2;
   private RelativeLayout lightStatus;
 
+  private Photographer photographerData;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -36,7 +37,7 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
     if (null != myIntent){
       int photographerId = myIntent.getIntExtra(PHOTOGRAPHER_ID_KEY, -1);
       if (photographerId != -1){
-        Photographer photographerData = SampleDataSet.getInstance().getPhotographerById(photographerId);
+        photographerData = SampleDataSet.getInstance().getPhotographerById(photographerId);
         if (null != photographerData){
           setDataViews(photographerData);
         }
@@ -44,6 +45,7 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
     }
 
     btnCloseProfile.setOnClickListener(this);
+    btnBook.setOnClickListener(this);
   }
 
   private void initViews() {
@@ -93,14 +95,15 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
   }
 
   @Override
-  public void onClick(View view)
-  {
+  public void onClick(View view) {
     switch (view.getId()) {
       case R.id.btnCloseProfile:
         finish();
         break;
       case R.id.btnBooking:
-        // Do Things
+        Intent myInt = new Intent(this, BookingForm.class);
+        myInt.putExtra(PHOTOGRAPHER_ID_KEY, photographerData.getId());
+        startActivity(myInt);
         break;
       default:
         break;

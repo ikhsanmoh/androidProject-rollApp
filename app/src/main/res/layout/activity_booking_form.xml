@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".BookingForm">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/card1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rowOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgPhotographer"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgPhotographer"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/photographer_name"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/rowOne">
+
+                    <TextView
+                        android:id="@+id/labelPlayDate"
+                        android:labelFor="@id/labelPlayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/play_date" />
+
+                    <Spinner
+                        android:id="@+id/spinDate"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labelPlayDate"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/labelTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spinDate"
+                        android:text="@string/start_time" />
+
+                    <Spinner
+                        android:id="@+id/spinTime"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labelTime"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/labelCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spinTime"
+                        android:text="@string/categories" />
+
+                    <Spinner
+                        android:id="@+id/spinCategories"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labelCategories"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/labelLocation"
+                        android:labelFor="@id/editTxtLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spinCategories"
+                        android:text="@string/location" />
+
+                    <EditText
+                        android:id="@+id/editTxtLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labelLocation"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+
+                    <TextView
+                        android:id="@+id/labelNote"
+                        android:labelFor="@id/editTxtPartnerNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/editTxtLocation"
+                        android:text="@string/notes" />
+
+                    <EditText
+                        android:id="@+id/editTxtPartnerNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/labelNote"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+
+                    <RadioGroup
+                        android:id="@+id/radioWrapper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@id/editTxtPartnerNotes">
+
+                        <RadioButton
+                            android:id="@+id/radioOptPhoto"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/photo"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioOptVideo"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/video"
+                            android:textSize="12sp" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/buttonActionWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/radioWrapper"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:id="@+id/btnCancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/circle_shape_transparent_stroke_green"
+                            android:backgroundTint="@color/red"
+                            android:text="@string/cancel"
+                            android:textColor="@color/red" />
+
+                        <Button
+                            android:id="@+id/btnConfirm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/circle_shape_transparent_stroke_green"
+                            android:text="@string/next"
+                            android:textColor="@color/green"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/labelFormNote"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buttonActionWrapper"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="25dp"
+                        android:text="@string/book_note"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
