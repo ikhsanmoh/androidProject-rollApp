@@ -2,20 +2,36 @@ package project.roll;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-  AlertDialog.Builder builder;
+  // TODO: Create fragment that can call other fragment
+
+  private TextView btnAbout;
+//  private Button btnBack;
+  private AlertDialog.Builder builder;
+  private Fragment selectedFragment;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    btnAbout = findViewById(R.id.btn_about);
+//    btnBack = findViewById(R.id.buttonTest);
+
+    btnAbout.setOnClickListener(this);
+//    btnBack.setOnClickListener(this);
+
+    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new StarterPageFragment()).commit();
   }
 
   // Regist Button Event Handler
@@ -32,6 +48,21 @@ public class MainActivity extends AppCompatActivity {
     Intent myInt = new Intent(this, LoginActivity.class);
     //Opening New Activity
     startActivity(myInt);
+  }
+
+  @Override
+  public void onClick(View view) {
+    switch (view.getId()) {
+      case R.id.btn_about:
+        selectedFragment = new AboutFragment();
+        break;
+//      case R.id.buttonTest:
+//        selectedFragment = new StarterPageFragment();
+//        break;
+      default:
+        break;
+    }
+    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, selectedFragment).commit();
   }
 
   //Costumize Fungsi tombol back
