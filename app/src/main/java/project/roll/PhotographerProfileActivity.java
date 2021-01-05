@@ -2,8 +2,12 @@ package project.roll;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,6 +30,8 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
 
   private Photographer photographerData;
 
+  private  BroadcastReceiver broadcastReceiver;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -46,6 +52,18 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
 
     btnCloseProfile.setOnClickListener(this);
     btnBook.setOnClickListener(this);
+
+    broadcastReceiver = new BroadcastReceiver() {
+      @Override
+      public void onReceive(Context arg0, Intent intent) {
+        String action = intent.getAction();
+        if (action.equals("finish_activity")) {
+          Log.d("OnReceiveTest", "Photographer Profile Finished");
+          finish();
+        }
+      }
+    };
+    registerReceiver(broadcastReceiver, new IntentFilter("finish_activity"));
   }
 
   private void initViews() {
@@ -108,5 +126,11 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
       default:
         break;
     }
+  }
+
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    unregisterReceiver(broadcastReceiver);
   }
 }

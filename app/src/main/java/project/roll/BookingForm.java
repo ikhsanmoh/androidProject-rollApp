@@ -2,8 +2,12 @@ package project.roll;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -34,7 +38,9 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
 
   private String[] formData;
 
-  Photographer photographerData;
+  private Photographer photographerData;
+
+  private BroadcastReceiver broadcastReceiver;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +113,18 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
 
     btnCancel.setOnClickListener(this);
     btnConfirm.setOnClickListener(this);
+
+    broadcastReceiver = new BroadcastReceiver() {
+      @Override
+      public void onReceive(Context arg0, Intent intent) {
+        String action = intent.getAction();
+        if (action.equals("finish_activity")) {
+          Log.d("OnReceiveTest", "Booking Form Finished");
+          finish();
+        }
+      }
+    };
+    registerReceiver(broadcastReceiver, new IntentFilter("finish_activity"));
   }
 
   public ArrayAdapter<String> adapterSetup(){
@@ -172,5 +190,11 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
       default:
         break;
     }
+  }
+
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    unregisterReceiver(broadcastReceiver);
   }
 }

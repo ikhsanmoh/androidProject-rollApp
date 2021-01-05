@@ -2,6 +2,7 @@ package project.roll;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,7 @@ public class OrderConfirmation extends AppCompatActivity implements View.OnClick
 
   private String inputDate, inputTime, inputCategories, inputLocation, inputNotes;
 
-  Photographer photographerData;
+  private Photographer photographerData;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -125,7 +126,12 @@ public class OrderConfirmation extends AppCompatActivity implements View.OnClick
         finish();
         break;
       case R.id.btnOrder:
-        // Do Things
+        Intent myInt = new Intent(this, OrderCompleted.class);
+        myInt.putExtra(PHOTOGRAPHER_ID_KEY, photographerData.getId());
+        Intent intent = new Intent("finish_activity");
+        sendBroadcast(intent);
+        startActivity(myInt);
+        finish();
         break;
       default:
         break;

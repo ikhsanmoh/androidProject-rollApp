@@ -8,6 +8,9 @@
     <string name="book_note">
         * The rental duration will start when partner has met the customer
     </string>
+    <string name="order_messages">
+        The system will process and contact your choice of partners, Enjoy
+    </string>
     <string name="prompt_inputValue">Some Text</string>
 
     <!-- Button Text -->
@@ -21,6 +24,7 @@
     <string name="next">Next</string>
     <string name="back">Back</string>
     <string name="order">Order</string>
+    <string name="finish_order">Back to Main Screen</string>
 
     <!-- Label -->
     <string name="home">Home</string>
