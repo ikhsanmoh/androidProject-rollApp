@@ -62,6 +62,11 @@
     <string name="photographer_services">Profession</string>
     <string name="photographer_top_porto">Best Capture</string>
     <string name="comment">Comments</string>
+    <string name="porto">Portofolio</string>
+    <string name="booking_instruct">How to book our partners?</string>
+    <string name="booking_instruct1">Search what you need</string>
+    <string name="booking_instruct2">Book one ore more</string>
+    <string name="booking_instruct3">Ready, Set, Wow!</string>
 
     <!-- Example -->
     <string name="photographer_name">Nama Photographer</string>

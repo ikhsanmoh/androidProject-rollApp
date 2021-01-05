@@ -34,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
     startActivity(myInt);
   }
 
+  // About Button Event Handler
+  public void onClickAbout(View v){
+    //Create instance for Intent Object
+    Intent myInt = new Intent(this, About.class);
+    //Opening New Activity
+    startActivity(myInt);
+  }
+
   //Costumize Fungsi tombol back
   @Override
   public void onBackPressed() {
