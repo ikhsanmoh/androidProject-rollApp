@@ -16,8 +16,13 @@
     <!-- Button Text -->
     <string name="about">ABOUT</string>
     <string name="contact">CONTACT</string>
+    <string name="profile">PROFILE</string>
+    <string name="progress">PROGRESS</string>
+    <string name="rated">RATED</string>
+    <string name="gallery">GALLERY</string>
     <string name="regist">REGISTER</string>
     <string name="login">LOGIN</string>
+    <string name="logout">LOGOUT</string>
     <string name="propmt_close">X</string>
     <string name="booking">Book</string>
     <string name="cancel">Cancel</string>

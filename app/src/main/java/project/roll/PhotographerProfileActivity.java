@@ -30,7 +30,7 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
 
   private Photographer photographerData;
 
-  private  BroadcastReceiver broadcastReceiver;
+  private BroadcastReceiver broadcastReceiver;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +57,13 @@ public class PhotographerProfileActivity extends AppCompatActivity implements Vi
       @Override
       public void onReceive(Context arg0, Intent intent) {
         String action = intent.getAction();
-        if (action.equals("finish_activity")) {
+        if (action.equals("finish_order_activity")) {
           Log.d("OnReceiveTest", "Photographer Profile Finished");
           finish();
         }
       }
     };
-    registerReceiver(broadcastReceiver, new IntentFilter("finish_activity"));
+    registerReceiver(broadcastReceiver, new IntentFilter("finish_order_activity"));
   }
 
   private void initViews() {

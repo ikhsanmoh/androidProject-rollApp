@@ -128,7 +128,7 @@ public class OrderConfirmation extends AppCompatActivity implements View.OnClick
       case R.id.btnOrder:
         Intent myInt = new Intent(this, OrderCompleted.class);
         myInt.putExtra(PHOTOGRAPHER_ID_KEY, photographerData.getId());
-        Intent intent = new Intent("finish_activity");
+        Intent intent = new Intent("finish_order_activity");
         sendBroadcast(intent);
         startActivity(myInt);
         finish();

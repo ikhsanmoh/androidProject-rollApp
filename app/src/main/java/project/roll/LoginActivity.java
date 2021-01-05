@@ -20,5 +20,6 @@ public class LoginActivity extends AppCompatActivity {
     Intent myInt = new Intent(this, BerandaActivity.class);
     //Opening New Activity
     startActivity(myInt);
+    finish();
   }
 }

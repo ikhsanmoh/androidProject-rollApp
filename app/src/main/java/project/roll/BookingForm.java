@@ -118,13 +118,13 @@ public class BookingForm extends AppCompatActivity implements View.OnClickListen
       @Override
       public void onReceive(Context arg0, Intent intent) {
         String action = intent.getAction();
-        if (action.equals("finish_activity")) {
+        if (action.equals("finish_order_activity")) {
           Log.d("OnReceiveTest", "Booking Form Finished");
           finish();
         }
       }
     };
-    registerReceiver(broadcastReceiver, new IntentFilter("finish_activity"));
+    registerReceiver(broadcastReceiver, new IntentFilter("finish_order_activity"));
   }
 
   public ArrayAdapter<String> adapterSetup(){
